@@ -1,0 +1,34 @@
+#+TITLE: latvian-holidays.el - Latvian holidays
+#+AUTHOR: Alexander Shumilov
+
+The list of Latvian holidays (day offs) and commemoration days.
+
+Information sources:
+- [[https://likumi.lv/doc.php?id=72608][likumi.lv]]
+- [[https://lv.wikipedia.org/wiki/Vispārējie_latviešu_Dziesmu_un_Deju_svētki][Wikipedia]]
+
+* Installation
+
+Replace holidays:
+
+#+BEGIN_SRC emacs-lisp
+(setq calendar-holidays latvian-holidays)
+#+END_SRC
+
+Or append holidays:
+
+#+BEGIN_SRC emacs-lisp
+(setq calendar-holidays (append calendar-holidays latvian-holidays))
+#+END_SRC
+
+You could also append commemoration and celebration days:
+
+#+BEGIN_SRC emacs-lisp
+(setq calendar-holidays (append latvian-holidays latvian-holidays-commemoration-days))
+#+END_SRC
+
+or:
+
+#+BEGIN_SRC emacs-lisp
+(setq calendar-holidays (append calendar-holidays latvian-holidays latvian-holidays-commemoration-days))
+#+END_SRC
