@@ -48,9 +48,10 @@
 
 ;;; Code:
 
-(eval-when-compile
-  (require 'calendar)
-  (require 'holidays))
+
+(require 'calendar)
+
+(defvar displayed-year)
 
 (defvar latvian-holidays-public-holidays
   '((holiday-fixed 1 1 "Jaunais Gads")
